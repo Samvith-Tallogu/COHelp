@@ -1,9 +1,10 @@
 <html>
 
 <head>
-    <title>Oxygen Cylinders Avaliability</title>
-    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-analytics.js"></script>
+    <title>User Login</title>
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -15,22 +16,19 @@
 
 <body>
     <center>
-        <h2>Oxygen Cylinder Avaliability</h2>
+        <h2 class="header">User Login</h2>
         <br>
         <br>
         <div id="div1">
-
-            <div id="User">
-                <p>Username: <input type="text" id="username" placeholder="Username"> </p>
-                <p>Password: <input type="password" id="password" placeholder="Password"></p>
-                <br>
-                <input type="radio" id="service" name="logintype" value="service">
-                <label for="service">Service Provider</label>
-                <input type="radio" id="user" name="logintype" value="user">
-                <label for="user">Customer</label><br>
-                <br>
-                <button class="btn btn-primary" onclick="route_page()" id="User_Login">Login</button>
-            </div>
+            <p>Username: <input type="text" id="username" placeholder="Username"> </p>
+            <p>Password: <input type="password" id="password" placeholder="Password"></p>
+            <br>
+            <input id="l1" type="radio" name="logintype" value="service"> Service Provider
+            <br>
+            <input id="l2" type="radio" name="logintype" value="user"> Customer
+            <br>
+            <button class="btn btn-primary" onclick="validate_login()" id="user_login">Login</button>
+        </div>
     </center>
 </body>
 
