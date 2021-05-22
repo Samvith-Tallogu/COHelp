@@ -1,0 +1,24 @@
+html, body
+{
+  height: 100%;
+  margin: 0;
+}
+
+body
+{
+background-image: linear-gradient(to right top, #33a0f1, #2591d9, #1882c1, #0a73aa, #006494);
+text-align: center;
+align-items: center;
+}
+
+
+#div1{
+    background-color: whitesmoke;
+    border-radius: 15px;
+    width: 60%;
+    align-content: center;
+    padding: 40px;
+}
+#username, #password{
+    width: 150px;
+}
