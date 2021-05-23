@@ -22,3 +22,26 @@ align-items: center;
 #username, #password{
     width: 150px;
 }
+#div-1, #div-2, #div-3, #div-4{
+  background-color: whitesmoke;
+  border-radius: 15px;
+  align-content: center;
+  padding: 40px;
+  width: 100%;
+}
+
+section {
+	display: flex;
+  }
+
+nav{
+  width: 40%;
+  margin-right: 5%;
+  margin-left: 5%;
+}
+article{
+  width: 40%;
+}
+.form-control{
+  width: 65%;
+}

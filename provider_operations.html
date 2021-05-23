@@ -1,22 +1,72 @@
 <html>
-    <head>
-        <title>Service Provider</title>
-        <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
-    
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    
-        <link rel="stylesheet" type="text/css" href="style.css">
-    </head>
-    <body>
-        <center>
-            <h2 class="header">Service Providers</h2><br><br>
-            <div id="div1">
-                <p>Welcome to Service Provider Page</p>
+
+<head>
+    <title>Service Provider</title>
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="provider_operations.js"></script>
+</head>
+
+<body>
+    <center>
+        <h2 class="header">Service Providers</h2><br><br>
+        <section>
+            <nav>
+            <div id="div-1">
+                <h4>Update Oxygen Cylinders Avaliability</h4>
+                <p>Current number: <label id="current_o2_count"></label></p>
+                <hr>
+                <input type="number" class="form-control" id="oxygen_cylinders_input"
+                    placeholder="Number Of Oxygen Cylinders you can provide"><br>
+                <button onclick="update_cylinders()" class="btn btn-info">Update</button>
             </div>
-        </center>
-    </body>
+        </nav>
+            <article>
+            <div id="div-2">
+                <h4>Update Medicines Avaliability</h4>
+                <p>Current number: <label id="current_medicines_count"></label></p>
+                <hr>
+                <input type="number" class="form-control" id="medicines_input"
+                    placeholder="Number Of Medicines Avaliable in your Area"><br>
+                <button onclick="update_medicines()" class="btn btn-info">Update</button>
+            </div>
+        </article>
+        </section>
+        <br>
+        <br>
+        <section>
+            <nav>
+        <div id="div-3">
+            <h4>Update Isolation Rooms Avaliability</h4>
+            <p>Current number: <label id="current_room_count"></label></p>
+            <hr>
+            <input type="number" class="form-control" id="isolation_rooms_input"
+                placeholder="Number Of Isolation rooms Avaliable in your Area"><br>
+            <button onclick="update_isrooms()" class="btn btn-info">Update</button>
+        </div>
+        </nav>
+        <article>
+
+        <div id="div-4">
+            <h4>Update Food Avaliability</h4>
+            <p>Current number: <label id="current_food_count"></label></p>
+            <hr>
+            <input type="number" class="form-control" id="food_input"
+                placeholder="Amount of Food Avaliable in your Area"><br>
+            <button onclick="update_food()" class="btn btn-info">Update</button>
+        </div>
+        </article>
+        </section>
+        <br>
+        <br>
+    </center>
+</body>
+
 </html>

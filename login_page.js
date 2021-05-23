@@ -14,6 +14,7 @@ firebase.initializeApp(firebaseConfig);
 function validate_login() {
     // Step 1: get the values of username and password from previous page
     username = document.getElementById("username").value;
+    localStorage.setItem("username",username);
     password = document.getElementById("password").value;
     logintype = document.querySelector('input[name="logintype"]:checked').value;
     console.log("username provided: " + username);
