@@ -10,12 +10,26 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     
         <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="user_operations.js"></script>
     </head>
     <body>
+        <button id="logout" onclick="logout();" class="glyphicon glyphicon-log-out btn btn-danger">Logout</button>
         <center>
             <h2 class="header">Customer Page</h2><br><br>
             <div id="div1">
-                <p>Welcome to Customer Page</p>
+                <p>Number of Oxygen Cylinders Avaliable: <label id="o2_count"></label></p>
+                <br>
+                <hr>
+                <br>
+                <p>Number of Isolation rooms Avaliable: <label id="room_count"></label></p>
+                <br>
+                <hr>
+                <br>
+                <p>Number of Medicines Avaliable: <label id="medicines_count"></label></p>
+                <br>
+                <hr>
+                <br>
+                <p>Amount of Food Avaliable: <label id="food_count"></label></p>
             </div>
         </center>
     </body>
