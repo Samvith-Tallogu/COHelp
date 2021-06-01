@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Sign Up Now</title>
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="signup_page.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <header>
+            <h2>Sign Up Now</h2>
+        </header>
+        <br>
+        <center>
+        <div id="div1">
+            <br>
+            <h3> Username:</h3>
+            <input type="text" class="form-control" id="username" placeholder="Username">
+            <h3> Password:</h3>
+            <input type="password" class="form-control" id="password" placeholder="Password">
+            <br>
+            <button class="btn btn-success" onclick="adduser()">Sign Up</button>
+        </div>
+        <div id="div1">
+            <br>
+            <p>click <a href="index.html">here</a> to login after sign-up!</p>
+        </div>
+        </center>
+    </body>
+</html>

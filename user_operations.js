@@ -16,28 +16,28 @@ function get_all_counts() {
 
     //username = localStorage.getItem("username");
     username = "Total";
-    console.log("username =" + username);
-    firebase.database().ref("/Total").on('value', function (snapshot) {
+    //console.log("username =" + username);
+    firebase.database().ref("/Total/oxygen_cyl_count").on('value', function (snapshot) {
         current_count = snapshot.val();
-        console.log("current O2 count: " + current_count);
+        //console.log("current O2 count: " + current_count);
         document.getElementById("o2_count").innerHTML = current_count;
     });
     
-    firebase.database().ref("/Total").on('value', function (snapshot) {
+    firebase.database().ref("/Total/isolation_rooms_count").on('value', function (snapshot) {
         current_count = snapshot.val();
-        console.log("current room count: " + current_count);
+        //console.log("current room count: " + current_count);
         document.getElementById("room_count").innerHTML = current_count;
     });
 
-    firebase.database().ref("/Total").on('value', function (snapshot) {
+    firebase.database().ref("/Total/medicines_count").on('value', function (snapshot) {
         current_count = snapshot.val();
-        console.log("current medicines count: " + current_count);
+        //console.log("current medicines count: " + current_count);
         document.getElementById("medicines_count").innerHTML = current_count;
     });
 
-    firebase.database().ref("/Total").on('value', function (snapshot) {
+    firebase.database().ref("/Total/food_count").on('value', function (snapshot) {
         current_count = snapshot.val();
-        console.log("current food count: " + current_count);
+        //console.log("current food count: " + current_count);
         document.getElementById("food_count").innerHTML = current_count;
     });
 }

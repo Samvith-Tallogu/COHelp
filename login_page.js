@@ -38,10 +38,13 @@ function validate_login() {
                     window.location = "provider_operations.html";
                 }
                 else {
-                    //window.location = "incorrect_input.html";
+                    window.location = "incorrect_input.html";
                 }
-            } //else
-                //window.location = "incorrect_input.html";
+            } else
+                window.location = "incorrect_input.html";
         });
     });
+}
+function adduserpage() {
+   window.location = "signup_page.html"; 
 }

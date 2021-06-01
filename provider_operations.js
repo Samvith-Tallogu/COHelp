@@ -12,26 +12,32 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 var username = localStorage.getItem("username");
+var total_product_count;
+var prv_product_count;
 
 function update_count(product_input, product_count) {
-    var total_product_count;
-    var prv_product_count;
     
-    // product_input: food_input, product_count: food_count
+
+    //localStorage.setItem(total_product_count);
+    //localStorage.setItem(prv_product_count);
+    
+    // product_inputs food_input, product_count: food_count
     // new value from provider
     new_product_count = parseInt(document.getElementById(product_input).value);
     console.log("updating " + product_count + ": " + new_product_count);
     // current total in db
     
-    firebase.database().ref("/" + "Total/" + product_count).on('value', function (snapshot) {
+    firebase.database().ref("/" + "Total/" + product_count)
+        .once('value', function (snapshot) {
+            window.total_product_count = snapshot.val();
         total_product_count = snapshot.val();
         console.log("total_product_count " + product_count + " " + total_product_count);
-        return total_product_count;
     });
     console.log("total_product_count " + product_count + ": " + total_product_count);
     // current provider count in db
     
-    firebase.database().ref("/" + username + "/" + product_count).on('value', function (snapshot) {
+    var product_count_in_db = firebase.database().ref("/" + username + "/" + product_count);
+    product_count_in_db.once('value', function (snapshot) {
         prv_product_count = snapshot.val();
         console.log("Provider Product Count " + product_count + ": " + prv_product_count);
         return prv_product_count;
