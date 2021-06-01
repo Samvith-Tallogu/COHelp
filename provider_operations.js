@@ -95,3 +95,9 @@ function get_all_counts() {
     });
 }
 get_all_counts();
+
+
+function logout() {
+    window.location = "index.html";
+    localStorage.removeItem(username);
+}
