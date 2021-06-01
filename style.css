@@ -26,7 +26,7 @@ align-items: center;
   background-color: whitesmoke;
   border-radius: 15px;
   align-content: center;
-  padding: 40px;
+  padding: 10px;
   width: 100%;
 }
 
@@ -58,4 +58,14 @@ article{
 
 #div_signup{
   margin-left: 100px;
+}
+
+#o2_count, #room_count, #medicines_count, #food_count{
+  font-size: 50px;
+}
+
+#logo{
+  height: 2cm;
+  border-radius: 10px;
+  margin-left: 15px;
 }
