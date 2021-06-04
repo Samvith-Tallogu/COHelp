@@ -22,5 +22,5 @@ function adduser(){
         "medicines_count": 0,
         "food_count": 0
     });
-    //window.alert("Account Created");
+    window.alert("Account Created");
 }
